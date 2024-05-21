@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="images/Favicon-32x32.jpeg">
+    <link rel="stylesheet" href="dash.css">
+    <title>R-Gamer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Recycling Dashboard</h2>
+    <div class="tabs">
+        <div class="tab plastic active" onclick="showEarnings('plastic')">Plastic Bottles</div>
+        <div class="tab metal" onclick="showEarnings('metal')">Metals</div>
+        <div class="tab glass" onclick="showEarnings('glass')">Glass</div>
+    </div>
+    <div class="earnings-container" id="earnings-container"></div>
+    <button class="drop-off-button" onclick="dropOffWaste()">Drop Off Waste</button>
+</div>
+
+<canvas id="myChart"></canvas>
+
+<script src="script.js"></script>
+</script>
+</body>
+</html>
