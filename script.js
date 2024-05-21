@@ -83,3 +83,33 @@ function updateChart() {
     myChart.data.datasets[0].data = [totalEarnings['plastic'], totalEarnings['metal'], totalEarnings['glass']];
     myChart.update();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            // Add your login logic here
+            alert('Login Successful!');
+        });
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            alert('Registration Successful!');
+        });
+    }
+});
